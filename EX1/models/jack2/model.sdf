@@ -1,0 +1,980 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="Jack2">
+
+    <self_collide>false</self_collide>
+    <static>false</static>
+
+          <!-- FORK1 START -->
+           <link name='fork1'>
+            <pose>0 0 0.12 0 0 0</pose>
+
+
+            <collision name='fork1_collision'>
+              <geometry>
+                <box>
+                  <size>1 .2 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork1_visual'>
+              <geometry>
+                <box>
+                  <size>1 .2 .05</size>
+                </box>
+              </geometry>
+            </visual>
+
+            <collision name='fork1_holeright_collision'>
+        <pose>0.6 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork1_holeright_visual'>
+              <pose>0.6 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </visual>
+
+            <collision name='fork1_holeleft_collision'>
+        <pose>0.6 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork1_holeleft_visual'>
+              <pose>0.6 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </visual>
+
+
+            <collision name='fork1_end_collision'>
+              <pose>0.75 0 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .2 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork1_end_visual'>
+              <pose>0.75 0 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .2 .05</size>
+                </box>
+              </geometry>
+</visual>
+
+    
+
+          <collision name="fork1_wheelholder_cylinder_collision">
+            <pose>0.3 0 -0.0250 0 1.5708 1.5708</pose>
+          <geometry>
+            <cylinder>
+              <radius>.02</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="fork1_wheelholder_cylinder__visual">
+          <pose>0.3 0 -0.025 0 1.5708 1.5708</pose>
+          <geometry>
+            <cylinder>
+              <radius>.02</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </visual>
+
+      </link>
+
+
+
+
+
+
+
+
+
+      <link name='fork1_wheelholder'>
+            <pose>0.4 0 0.07 0 0 0</pose>
+
+            <collision name='fork1_wheelholder_collision'>
+              <geometry>
+                <box>
+                  <size>0.20 .2 .01</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork1_wheelholder_visual'>
+              <geometry>
+                <box>
+                  <size>0.20 .2 .01</size>
+                </box>
+              </geometry>
+            </visual>
+
+      <collision name='fork1_wheelholder_holeright_collision'>
+        <pose>0.15 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork1_wheelholder_holeright_visual'>
+              <pose>0.15 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </visual>
+
+            <collision name='fork1_wheelholder_holeleft_collision'>
+        <pose>0.15 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork1_wheelholder_holeleft_visual'>
+              <pose>0.15 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </visual>
+      </link>
+
+      <link name="fork1_prismatic_cylinder_top">
+        <pose>0.48 0 0.09 0 1.5708 1.5708</pose>
+        <collision name="fork1_prismatic_cylinder_top_collision">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="fork1_prismatic_cylinder_top_visual">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
+
+
+      <link name="fork1_prismatic_cylinder_bottom">
+        <pose>0.48 0 0.08 0 1.5708 1.5708</pose>
+        <collision name="ork1_prismatic_cylinder_bottom_collision">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="ork1_prismatic_cylinder_bottom_visual">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
+
+
+
+        <link name="fork1_wheel">
+        <pose>0.60 0 0.07 0 1.5708 1.5708</pose>
+        <collision name="fork2_wheel_collision">
+          <geometry>
+            <cylinder>
+              <radius>.07</radius>
+              <length>.09</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="fork2_wheel_visual">
+          <geometry>
+            <cylinder>
+              <radius>.07</radius>
+              <length>.09</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
+      <joint type="revolute" name="fork1_wheelholder_hinge">
+        <pose>-0.1 0 0.005 0 0 0</pose>
+        <child>fork1_wheelholder</child>
+        <parent>fork1</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="fork1_prismatic_cylinder_top_hinge">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>fork1_prismatic_cylinder_top</child>
+        <parent>fork1</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="fork1_prismatic_cylinder_bottom_hinge">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>fork1_prismatic_cylinder_bottom</child>
+        <parent>fork1_wheelholder</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="fork1_wheel_joint">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>fork1_wheel</child>
+        <parent>fork1_wheelholder</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+      <!--
+      <joint type="fixed" name="fix_fork1">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>fork1</child>
+        <parent>world</parent>
+      </joint>
+    -->
+      
+      
+      <joint type="prismatic" name="fork1_prismatic">
+        <pose>0 0 -0.01 0 0 0</pose>
+        <child>fork1_prismatic_cylinder_top</child>
+        <parent>fork1_prismatic_cylinder_bottom</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0.05</upper>
+            <lower>0.0</lower>
+            <velocity>0.001</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <!-- FORK1 END -->
+
+
+
+                <!-- fork2 START -->
+           <link name='fork2'>
+            <pose>0 0.6 0.12 0 0 0</pose>
+
+
+            <collision name='fork2_collision'>
+              <geometry>
+                <box>
+                  <size>1 .2 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork2_visual'>
+              <geometry>
+                <box>
+                  <size>1 .2 .05</size>
+                </box>
+              </geometry>
+            </visual>
+
+
+
+            <collision name='fork2_holeright_collision'>
+        <pose>0.6 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork2_holeright_visual'>
+              <pose>0.6 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </visual>
+
+            <collision name='fork2_holeleft_collision'>
+        <pose>0.6 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork2_holeleft_visual'>
+              <pose>0.6 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.2 .05 .05</size>
+                </box>
+              </geometry>
+            </visual>
+
+
+            <collision name='fork2_end_collision'>
+              <pose>0.75 0 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .2 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork2_end_visual'>
+              <pose>0.75 0 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .2 .05</size>
+                </box>
+              </geometry>
+            </visual>
+
+
+          <collision name="fork2_wheelholder_cylinder_collision">
+            <pose>0.3 0 -0.0250 0 1.5708 1.5708</pose>
+          <geometry>
+            <cylinder>
+              <radius>.02</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="fork2_wheelholder_cylinder__visual">
+          <pose>0.3 0 -0.025 0 1.5708 1.5708</pose>
+          <geometry>
+            <cylinder>
+              <radius>.02</radius>
+              <length>.2</length>
+            </cylinder>
+          </geometry>
+        </visual>
+
+      </link>
+
+
+
+
+
+
+
+
+
+      <link name='fork2_wheelholder'>
+            <pose>0.4 0.6 0.07 0 0 0</pose>
+
+            <collision name='fork2_wheelholder_collision'>
+              <geometry>
+                <box>
+                  <size>0.20 .2 .01</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork2_wheelholder_visual'>
+              <geometry>
+                <box>
+                  <size>0.20 .2 .01</size>
+                </box>
+              </geometry>
+            </visual>
+
+      <collision name='fork2_wheelholder_holeright_collision'>
+        <pose>0.15 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork2_wheelholder_holeright_visual'>
+              <pose>0.15 0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </visual>
+
+            <collision name='fork2_wheelholder_holeleft_collision'>
+        <pose>0.15 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='fork2_wheelholder_holeleft_visual'>
+              <pose>0.15 -0.075 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .05 .01</size>
+                </box>
+              </geometry>
+            </visual>
+      </link>
+
+      <link name="fork2_prismatic_cylinder_top">
+        <pose>0.48 0.6 0.09 0 1.5708 1.5708</pose>
+        <collision name="fork2_prismatic_cylinder_top_collision">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="fork2_prismatic_cylinder_top_visual">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
+
+
+      <link name="fork2_prismatic_cylinder_bottom">
+        <pose>0.48 0.6 0.08 0 1.5708 1.5708</pose>
+        <collision name="fork2_prismatic_cylinder_bottom_collision">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="fork2_prismatic_cylinder_bottom_visual">
+          <geometry>
+            <cylinder>
+              <radius>.005</radius>
+              <length>.02</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
+
+
+
+        <link name="fork2_wheel">
+        <pose>0.60 0.6 0.07 0 1.5708 1.5708</pose>
+        <collision name="fork2_wheel_collision">
+          <geometry>
+            <cylinder>
+              <radius>.07</radius>
+              <length>.09</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="fork2_wheel_visual">
+          <geometry>
+            <cylinder>
+              <radius>.07</radius>
+              <length>.09</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
+      <joint type="revolute" name="fork2_wheelholder_hinge">
+        <pose>-0.1 0 0.005 0 0 0</pose>
+        <child>fork2_wheelholder</child>
+        <parent>fork2</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="fork2_prismatic_cylinder_top_hinge">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>fork2_prismatic_cylinder_top</child>
+        <parent>fork2</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="fork2_prismatic_cylinder_bottom_hinge">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>fork2_prismatic_cylinder_bottom</child>
+        <parent>fork2_wheelholder</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="fork2_wheel_joint">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>fork2_wheel</child>
+        <parent>fork2_wheelholder</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+      
+      
+      <joint type="prismatic" name="fork2_prismatic">
+        <pose>0 0 -0.01 0 0 0</pose>
+        <child>fork2_prismatic_cylinder_top</child>
+        <parent>fork2_prismatic_cylinder_bottom</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0.05</upper>
+            <lower>0.0</lower>
+            <velocity>0.001</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <!-- fork2 END -->
+
+
+      <link name='mid_prismatic'>
+        <pose>-0.45 0.3 0.345 0 0 0</pose>
+        <collision name='mid_prismatic_collision'>
+            <pose>0.0 0 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.01 .01 .01</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='mid_prismatic_visual'>
+              <pose>-0.0 0 0 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.01 .01 .01</size>
+                </box>
+              </geometry>
+            </visual>
+          </link>
+
+
+      <!-- mid START -->
+      <link name='mid'>
+            <pose>-0.45 0.3 0.345 0 0 0</pose>
+
+
+            <collision name='mid_wall_collision'>
+              <geometry>
+                <box>
+                  <size>0.1 .6 .5</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='mid_wall_visual'>
+              <geometry>
+                <box>
+                  <size>0.1 .6 .5</size>
+                </box>
+              </geometry>
+            </visual>
+            <collision name='mid_wall_distance_collision'>
+              <pose>0.07 0 0.1 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .1 .1</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='mid_wall_distance_visual'>
+              <pose>0.07 0 0.1 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.1 .1 .1</size>
+                </box>
+              </geometry>
+            </visual>
+
+
+
+
+          <collision name='mid_top_collision'>
+            <pose>-0.15 0 0.275 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.4 .6 .05</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='mid_top_visual'>
+              <pose>-0.15 0 0.275 0 0 0</pose>
+              <geometry>
+                <box>
+                  <size>0.4 .6 .05</size>
+                </box>
+              </geometry>
+            </visual>
+          </link>
+
+          <!-- mid END -->
+
+          <!-- Differential START -->
+
+          <link name='differential_body'>
+            <pose>-0.7 0.3 0.12 0 0 0</pose>
+
+            <collision name='differential_body_collision'>
+              <geometry>
+                <box>
+                  <size>0.1 .02 .1</size>
+                </box>
+              </geometry>
+            </collision>
+
+            <visual name='differential_body_visual'>
+              <geometry>
+                <box>
+                  <size>0.1 .02 .1</size>
+                </box>
+              </geometry>
+            </visual>
+          </link>
+
+        
+        <link name='differential_cylinder'>
+            <pose>-0.7 0.3 0.3825 0 0 0</pose>
+
+
+        <collision name="differential_cylinder_collision">
+          <geometry>
+            <cylinder>
+              <radius>.01</radius>
+              <length>.425</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="differential_cylinder_visual">
+          <geometry>
+            <cylinder>
+              <radius>.01</radius>
+              <length>.425</length>
+            </cylinder>
+          </geometry>
+        </visual>
+          </link>
+        
+
+
+
+          <link name='differential_wheel1'>
+            <pose>-0.7 0.35 0.12 0 1.5708 1.5708</pose>
+
+        <collision name="differential_wheel1_collision">
+          <geometry>
+            <cylinder>
+              <radius>.12</radius>
+              <length>.05</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="differential_wheel1_visual">
+          <geometry>
+            <cylinder>
+              <radius>.12</radius>
+              <length>.05</length>
+            </cylinder>
+          </geometry>
+        </visual>
+          </link>
+
+
+          <link name='differential_wheel2'>
+            <pose>-0.7 0.25 0.12 0 1.5708 1.5708</pose>
+
+        <collision name="differential_wheel2_collision">
+          <geometry>
+            <cylinder>
+              <radius>.12</radius>
+              <length>.05</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="differential_wheel2_visual">
+          <geometry>
+            <cylinder>
+              <radius>.12</radius>
+              <length>.05</length>
+            </cylinder>
+          </geometry>
+        </visual>
+          </link>
+
+
+
+          <!-- Differential END -->
+
+
+
+
+
+
+
+
+        
+
+
+          <!-- Additional Joints -->
+
+              
+
+      <joint type="fixed" name="fix_fork1_mid">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>mid</child>
+        <parent>fork1</parent>
+      </joint>
+
+              <joint type="fixed" name="fix_fork2_mid">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>mid</child>
+        <parent>fork2</parent>
+      </joint>
+
+
+                    <joint type="fixed" name="fix_diff_body_cylinder">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>differential_cylinder</child>
+        <parent>differential_body</parent>
+      </joint>
+
+                          <joint type="fixed" name="fix_camera">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>camera_link</child>
+        <parent>mid</parent>
+      </joint>
+
+          <!--
+            <joint type="fixed" name="fix_world">
+        <pose>-0 0 0 0 0 0</pose>
+        <child>mid</child>
+        <parent>world</parent>
+      </joint>
+      -->
+
+
+
+          
+            <joint type="revolute" name="differentialcylinder_mid_z">
+        <pose>0 0 0 0 0 0</pose>
+        <child>differential_cylinder</child>
+        <parent>mid_prismatic</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+            <limit>
+              <effort>10000</effort>
+          </limit>
+        </axis>
+      </joint>
+    
+
+
+            <joint type="prismatic" name="mid_prismatic_joint">
+        <pose>0 0 0 0 0 0</pose>
+        <child>mid</child>
+        <parent>mid_prismatic</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <upper>0.08</upper>
+            <lower>0</lower>
+            <velocity>0.0001</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+
+
+            <joint type="revolute" name="differential_wheel1_joint">
+        <pose>0 0 0 0 0 0</pose>
+        <child>differential_wheel1</child>
+        <parent>differential_body</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+                  <joint type="revolute" name="differential_wheel2_joint">
+        <pose>0 0 0 0 0 0</pose>
+        <child>differential_wheel2</child>
+        <parent>differential_body</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+        </axis>
+      </joint>
+
+
+      <!-- SENSORS -->
+
+    <link name="link">
+      <pose>-0.38 0.3 0.345 0 0 0</pose>
+      <inertial>
+        <mass>0.1</mass>
+      </inertial>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://hokuyo/meshes/hokuyo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision-base">
+        <pose>0 0 -0.0145 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.041</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="collision-top">
+        <pose>0 0 0.0205 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.021</radius>
+            <length>0.029</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <sensor name="laser" type="ray">
+        <pose>0.01 0 0.0175 0 -0 0</pose>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>640</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.26889</min_angle>
+              <max_angle>0.268899</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.02</min>
+            <max>0.4</max>
+            <resolution>0.01</resolution>
+          </range>
+        </ray>
+        <plugin name="laser" filename="libRayPlugin.so" />
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+      </sensor>
+    </link>
+
+    <link name="camera_link">
+      <pose>-0.75 0.3 0.65 0 0 3.141592</pose>
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.000166667</ixx>
+          <iyy>0.000166667</iyy>
+          <izz>0.000166667</izz>
+        </inertia>
+      </inertial>
+      <collision name="camera_collision">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="camera_visual">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.1</size>
+          </box>
+        </geometry>
+      </visual>
+      <sensor name="camera" type="camera">
+        <camera>
+          <horizontal_fov>1.047</horizontal_fov>
+          <image>
+            <width>320</width>
+            <height>240</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+      </sensor>
+    </link>
+
+
+
+    <joint name="hokuyo_joint" type="revolute">
+      <child>link</child>
+      <parent>mid</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+
+
+
+
+
+
+    <plugin name="prismatic_plugin" filename="libprismatic_plugin.so"/>
+    <plugin name="keyboard_plugin" filename="libkeyboard_plugin.so"/>
+
+
+  </model>
+</sdf>

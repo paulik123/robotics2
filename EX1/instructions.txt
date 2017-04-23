@@ -1,0 +1,33 @@
+Versions used: Gazebo 7, Ubuntu 16.04
+
+1. Copy the contents models folder to the gazebo/models folder(usually ~/.gazebo/models/).
+
+2. Open a new terminat and enter the following commands
+	cd robotics_project/EX1/start //assuming that robotics_project is located in the home folder
+	export GAZEBO_PLUGIN_PATH=$PWD //makes gazebo search for the required plugins in the current directory
+	gazebo jack2_world.sdf --verbose //opens gazebo with a custom world
+
+3. After gazebo has loaded make the gazebo gui window fit on half of the screen(or windowed)
+
+4. Open another terminal, make this terminal fit on the other half of the screen and enter the following commands
+	cd robotics_project/EX1/start
+	./vel
+	control the robot using the WASD keys. //the terminal must be in focus //be gentle
+	if things the out of control(it happens) just reset the world (CTRL+R in the gazebo window) and start again.
+
+5. If you move the robot under the box all the way in the prismatic joints of the robot should rise.
+
+
+Notes: 
+-The plugins are already compiled. The source code is available in the plugin_src folder.
+
+Instructions for compiling: //we'll use prismatic_plugin as an example
+cd robotics_project/EX1/plugin_src/prismatic_plugin/build
+cmake ../
+make
+mv libprismatic_plugin.so ~/robotics_project/EX1/start //moving the plugin in the start folder
+
+
+
+
+	
