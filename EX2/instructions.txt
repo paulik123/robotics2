@@ -1,0 +1,38 @@
+Versions used: Gazebo 7, Ubuntu 16.04 / ROS Kinect
+Assumming your catkin workspace is located at ~/catkin_ws
+
+
+
+How to compile:
+1.Copy the contents of the /src folder in your ~/catkin_ws/src.
+2 Open a new terminal and enter the following commands:
+	cd ~/catkin_ws
+	catkin_make
+	
+	- The nodes should now be compiled.
+
+EX 2.1
+
+To run open roscore in a terminal and in another terminal enter the following commands:
+	. ~/catkin_ws/devel/setup.bash // adds the workspace to your ROS environment.
+	rosrun joy_simulator joy_simulator
+
+joy_simulator simulates the two main axes of each stick (WASD)/(IJKL) and 3 buttons (ZXC)
+You can view the simulated joy messages opening a new terminal and entering:
+	rostopic echo /joy
+
+EX 2.2/2.3
+All the modified/new nodes are located in the "examples" package.
+To see the nodes in action close ROS master if it's running, open 3 new terminals and enter the following commands:
+	
+	Terminal1: roscore
+	Terminal2: roslaunch turtlebot_gazebo turtlebot_world.launch
+	Terminal3: . ~/catkin_ws/devel/setup.bash
+		   roslaunch examples examples.launch
+	
+The nodes are now running and mux is set to manual. If you want to switch to auto press the A button on your joystick if you have one connected or open a new terminal, run joy_simulator just like in EX 2.1 the press the 'z' key once and mux should switch to auto.
+
+After you've pressed 'z' turtlebot should start moving to the coordinates x = 1.0, y = 2.0 provided by the joy_cmd node through a service named /goal. You can change the /goad coordinates by editing the parameters in the launch file located at src/examples/launch/examples.launch
+
+
+

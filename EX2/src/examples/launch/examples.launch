@@ -1,0 +1,9 @@
+<launch>
+<node pkg="examples" type="joy_cmd" name="joy_cmd" output="screen" />
+<param name="x" value="2.0"/>
+<param name="y" value="1.0"/>
+<param name="theta" value="0.0"/>
+<node pkg="examples" type="mux" name="mux" output="screen" />
+<node pkg="examples" type="control" name="control" output="screen" />
+<node pkg="examples" type="pose_from_odom" name="pose_from_odom" output="screen" />
+</launch>
